@@ -88,6 +88,24 @@ $.ajax(
 // User weather button
 $("#forecastbutton").on("click", function (event) {
   event.preventDefault();
-  var city = $("#userinput").val();
-  console.log(city);
+  var currentCity = $("#userinput").val();
+  console.log(currentCity);
+  $("#userinput").val("");
+  var queryURL =
+    "https://api.openweathermap.org/data/2.5/weather?q=" +
+    currentCity +
+    "&appid=" +
+    apiKey;
+  $.ajax({
+    url: queryURL,
+    method: "GET",
+  }).then(function (response) {
+    // Log the queryURL
+    console.log("queryURL: ", queryURL);
+
+    // Log the resulting object
+    console.log("response.coord: ", response.coord);
+    lat = response.coord.lat;
+    lon = response.coord.lon;
+  });
 });
