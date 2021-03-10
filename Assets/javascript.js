@@ -88,7 +88,7 @@ function getWeatherFunc(data) {
 }
 // Ajax call for today's weather
 $.ajax(
-  "http://api.openweathermap.org/data/2.5/weather?q=New%20York&units=imperial&appid=" +
+  "https://api.openweathermap.org/data/2.5/weather?q=New%20York&units=imperial&appid=" +
     apiKey
 ).then(function (data) {
   getWeatherFunc(data);
