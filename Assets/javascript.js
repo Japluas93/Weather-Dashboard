@@ -11,6 +11,8 @@ function todayWeather(currentWeather) {
     method: "GET",
   }).then(function (response) {
     $("#weatherIcon").empty();
+
+    var lat = response.coord.lat;
   });
 }
 function getWeatherFunc(data) {
