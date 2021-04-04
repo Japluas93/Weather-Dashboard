@@ -17,6 +17,10 @@ function todayWeather(currentWeather) {
     var currentDate = moment().format("dddd, MM-DD-YYYY");
     var fahrDegrees =
       Math.round(Math.floor(response.main.temp - 273.15)) * 1.8 + 32 + " ℉";
+    var weatherImage = $("<img>").attr(
+      "src",
+      "http://openweathermap.org/img/wn/" + response.weather[0].icon + ".png"
+    );
   });
 }
 function getWeatherFunc(data) {
