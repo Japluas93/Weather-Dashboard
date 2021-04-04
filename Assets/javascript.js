@@ -10,7 +10,7 @@ function todayWeather(currentWeather) {
   $.ajax({
     url: queryURL,
     method: "GET",
-  });
+  }).then(function (response) {});
 }
 function getWeatherFunc(data) {
   console.log(data);
