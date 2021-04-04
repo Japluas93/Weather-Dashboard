@@ -1,3 +1,4 @@
+// function to display weather for current day
 function todayWeather(currentWeather) {
   var apiKey = "48af17a7060c2205e40c1b9e5e56df19";
   var queryURL =
@@ -21,8 +22,16 @@ function todayWeather(currentWeather) {
       "src",
       "http://openweathermap.org/img/wn/" + response.weather[0].icon + ".png"
     );
+    // Dynamically rendering data to the front-end using jQuery
+    $("#city").text(response.name);
+    $("#currentday").text(currentDate);
+    $("#weatherIcon").append(weatherImage);
+    $("#currenttemp").text("Temperature: " + fahrDegrees);
+    $("#currentwind").text("Wind Speed: " + response.wind.speed + " MPH");
+    $("#currenthumidity").text("Humidity: " + response.main.humidity + "%");
   });
 }
+
 function getWeatherFunc(data) {
   console.log(data);
   $("#city").text("City: " + data.city.name);
