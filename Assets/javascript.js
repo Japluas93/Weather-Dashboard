@@ -1,5 +1,7 @@
-var apiKey = "48af17a7060c2205e40c1b9e5e56df19";
 // Ajax call for today's weather
+function todayWeather(currentWeather) {
+  var apiKey = "48af17a7060c2205e40c1b9e5e56df19";
+}
 $.ajax(
   "https://api.openweathermap.org/data/2.5/forecast?q=New%20York&units=imperial&appid=" +
     apiKey
