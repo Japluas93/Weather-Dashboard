@@ -1,4 +1,3 @@
-// Ajax call for today's weather
 function todayWeather(currentWeather) {
   var apiKey = "48af17a7060c2205e40c1b9e5e56df19";
   var queryURL =
@@ -6,7 +5,7 @@ function todayWeather(currentWeather) {
     currentWeather +
     "&appid=" +
     apiKey;
-
+  // Ajax call for today's weather
   $.ajax({
     url: queryURL,
     method: "GET",
