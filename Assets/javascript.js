@@ -6,13 +6,12 @@ function todayWeather(currentWeather) {
     currentWeather +
     "&appid=" +
     apiKey;
+
+  $.ajax({
+    url: queryURL,
+    method: "GET",
+  });
 }
-$.ajax(
-  "https://api.openweathermap.org/data/2.5/forecast?q=New%20York&units=imperial&appid=" +
-    apiKey
-).then(function (data) {
-  getWeatherFunc(data);
-});
 function getWeatherFunc(data) {
   console.log(data);
   $("#city").text("City: " + data.city.name);
