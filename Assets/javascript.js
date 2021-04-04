@@ -13,6 +13,7 @@ function todayWeather(currentWeather) {
     $("#weatherIcon").empty();
 
     var lat = response.coord.lat;
+    var lon = response.coord.lon;
   });
 }
 function getWeatherFunc(data) {
