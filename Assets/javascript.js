@@ -14,6 +14,7 @@ function todayWeather(currentWeather) {
 
     var lat = response.coord.lat;
     var lon = response.coord.lon;
+    var currentDate = moment().format("dddd, MM-DD-YYYY");
   });
 }
 function getWeatherFunc(data) {
