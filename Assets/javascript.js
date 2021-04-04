@@ -15,6 +15,8 @@ function todayWeather(currentWeather) {
     var lat = response.coord.lat;
     var lon = response.coord.lon;
     var currentDate = moment().format("dddd, MM-DD-YYYY");
+    var fahrDegrees =
+      Math.round(Math.floor(response.main.temp - 273.15)) * 1.8 + 32 + " ℉";
   });
 }
 function getWeatherFunc(data) {
