@@ -30,29 +30,14 @@ function todayWeather(currentWeather) {
     $("#currentwind").text("Wind Speed: " + response.wind.speed + " MPH");
     $("#currenthumidity").text("Humidity: " + response.main.humidity + "%");
   });
-  // User weather button
-  $("#forecastbutton").on("click", function (event) {
-    event.preventDefault();
-    var currentCity = $("#userinput").val();
-    console.log(currentCity);
-    $("#userinput").val("");
-    var apiKey = "48af17a7060c2205e40c1b9e5e56df19";
-    var queryURL =
-      "https://api.openweathermap.org/data/2.5/weather?q=" +
-      currentCity +
-      "&appid=" +
-      apiKey;
-    $.ajax({
-      url: queryURL,
-      method: "GET",
-    }).then(function (response) {
-      console.log(response);
-      // Log the queryURL
-      console.log("queryURL: ", queryURL);
-      todayWeather(response);
-    });
-  });
 }
+// User weather button
+$("#forecastbutton").on("click", function (event) {
+  event.preventDefault();
+  var currentCity = $("#userinput").val();
+  console.log(currentCity);
+  todayWeather();
+});
 
 // function getWeatherFunc(data) {
 //   console.log(data);
