@@ -36,7 +36,7 @@ $("#forecastbutton").on("click", function (event) {
   event.preventDefault();
   var currentCity = $("#userinput").val();
   console.log(currentCity);
-  todayWeather();
+  todayWeather(currentCity);
 });
 
 // function getWeatherFunc(data) {
