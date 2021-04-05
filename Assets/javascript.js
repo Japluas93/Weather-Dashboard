@@ -39,7 +39,7 @@ $("#forecastbutton").on("click", function (event) {
   todayWeather(currentCity);
 });
 
-function fiveDayForecast(data) {
+function fiveDayForecast(cityName) {
   console.log(data);
   $("#city").text("City: " + data.city.name);
   $("#currenttemp").text("Temperature: " + data.list.main.temp + "°F");
