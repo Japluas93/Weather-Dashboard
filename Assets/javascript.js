@@ -40,6 +40,7 @@ $("#forecastbutton").on("click", function (event) {
 });
 
 function fiveDayForecast(cityName) {
+  var apiKey = "48af17a7060c2205e40c1b9e5e56df19";
   console.log(data);
   $("#city").text("City: " + data.city.name);
   $("#currenttemp").text("Temperature: " + data.list.main.temp + "°F");
