@@ -46,6 +46,10 @@ function fiveDayForecast(cityName) {
     cityName +
     "&units=imperial&appid=" +
     apiKey;
+  $.ajax({
+    url: queryURLFiveDay,
+    method: "GET",
+  });
   console.log(data);
   $("#city").text("City: " + data.city.name);
   $("#currenttemp").text("Temperature: " + data.list.main.temp + "°F");
