@@ -37,6 +37,7 @@ $("#forecastbutton").on("click", function (event) {
   var currentCity = $("#userinput").val();
   console.log(currentCity);
   todayWeather(currentCity);
+  fiveDayForecast(currentCity);
 });
 
 function fiveDayForecast(cityName) {
@@ -44,28 +45,17 @@ function fiveDayForecast(cityName) {
   var queryURLFiveDays =
     "https://api.openweathermap.org/data/2.5/forecast?q=" +
     cityName +
+    "lat=" +
+    data.coord.lat +
+    "&lon=" +
+    data.coord.lon +
     "&units=imperial&appid=" +
     apiKey;
-  $.ajax({
-    url: queryURLFiveDay,
-    method: "GET",
-  });
-  console.log(data);
-  $("#city").text("City: " + data.city.name);
-  $("#currenttemp").text("Temperature: " + data.list.main.temp + "°F");
-  $("#currentwind").text("Wind Speed: " + data.wind.speed + " MPH");
-  $("#currenthumidity").text("Humidity: " + data.main.humidity + "%");
   // Ajax call for the 5 day forecast
-  $.ajax(
-    "https://api.openweathermap.org/data/2.5/forecast?q=" +
-      data +
-      "lat=" +
-      data.coord.lat +
-      "&lon=" +
-      data.coord.lon +
-      "&units=imperial&appid=" +
-      apiKey
-  ).then(function (forecastData) {
+  $.ajax({
+    url: queryURLFiveDays,
+    method: "GET",
+  }).then(function (forecastData) {
     console.log(forecastData);
     console.log(forecastData.daily[0].dt);
     $("#currentuv").text("UV: " + forecastData.current.uvi);
