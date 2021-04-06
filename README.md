@@ -16,7 +16,7 @@ This application is utilizing the https://openweathermap.org/ API, HTML, CSS, Ja
 # Application Preview
 
 Here is a preview of my web application:  
-![apppreview](Assets\weather-dashboard.JPG)
+![apppreview](Assets/weather-dashboard.JPG)
 
 # Application Link
 
