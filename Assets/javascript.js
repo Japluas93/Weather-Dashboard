@@ -54,19 +54,19 @@ function fiveDayForecast(cityName) {
     method: "GET",
   }).then(function (forecastData) {
     console.log(forecastData);
-    console.log(forecastData.daily[0].dt);
+    // console.log(forecastData.daily[0].dt);
     $("#currentuv").text("UV: " + forecastData.current.uvi);
 
     $("#dayone").html(`<div class="card">
     <div class="card-body">
       <p id="date" class="card-text">${new Date(
-        forecastData.daily[0].dt
+        forecastData.list[0].clouds.dt
       ).toDateString()} </p>
       <p id="currenttemp" class="card-text">Temp: ${
-        forecastData.daily[1].temp.day
+        forecastData.list[0].main.temp
       } F</p>
       <p id="currenthumidity" class="card-text">Humidity: ${
-        forecastData.daily[1].humidity
+        forecastData.list[0].main.humidity
       }% </p>
     </div>
   </div>`);
