@@ -15,7 +15,7 @@ function todayWeather(currentWeather) {
 
     var lat = response.coord.lat;
     var lon = response.coord.lon;
-    fiveDayForecast(cityName, lat, lon);
+    fiveDayForecast(currentWeather, lat, lon);
     var currentDate = moment().format("dddd, MM-DD-YYYY");
     var fahrDegrees =
       Math.round(Math.floor(response.main.temp - 273.15)) * 1.8 + 32 + " ℉";
@@ -41,13 +41,11 @@ $("#forecastbutton").on("click", function (event) {
   fiveDayForecast(currentCity);
 });
 
-function fiveDayForecast(cityName, lat, lon) {
+function fiveDayForecast(cityName) {
   var apiKey = "48af17a7060c2205e40c1b9e5e56df19";
   var queryURLFiveDays =
     "https://api.openweathermap.org/data/2.5/forecast?q=" +
     cityName +
-    lat +
-    lon +
     "&units=imperial&appid=" +
     apiKey;
   // Ajax call for the 5 day forecast
