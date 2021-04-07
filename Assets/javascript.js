@@ -1,3 +1,6 @@
+var myArray = localStorage.getItem("city")
+  ? JSON.parse(localStorage.getItem("city"))
+  : [];
 function displayHistory() {
   $(".previous-search").empty();
   for (var i = 0; i < myArray.length; i++) {
