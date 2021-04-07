@@ -58,7 +58,7 @@ function fiveDayForecast(cityName) {
     $("#dayone").html(`<div class="card">
     <div class="card-body">
       <p id="date" class="card-text">${new Date(
-        forecastData.list[0].clouds.dt_txt.toDateString()
+        forecastData.list[0].clouds.dt_txt.Intl.DateTimeFormat
       )} </p>
       <p id="currenttemp" class="card-text">Temp: ${
         forecastData.list[0].main.temp
