@@ -62,7 +62,7 @@ function fiveDayForecast(cityName) {
       ).toDateString()} </h5>
       <p id="currenttemp" class="card-text">Temp: ${
         forecastData.list[0].main.temp
-      } F</p>
+      } ℉</p>
       <p id="currenthumidity" class="card-text">Humidity: ${
         forecastData.list[0].main.humidity
       }% </p>
@@ -78,7 +78,7 @@ function fiveDayForecast(cityName) {
     ).toDateString()} </h5>
       <p id="currenttemp" class="card-text">Temp: ${
         forecastData.list[7].main.temp
-      } F</p>
+      } ℉</p>
       <p id="currenthumidity" class="card-text">Humidity: ${
         forecastData.list[7].main.humidity
       }% </p>
@@ -94,7 +94,7 @@ function fiveDayForecast(cityName) {
     ).toDateString()} </h5>
       <p id="currenttemp" class="card-text">Temp: ${
         forecastData.list[15].main.temp
-      } F</p>
+      } ℉</p>
       <p id="currenthumidity" class="card-text">Humidity: ${
         forecastData.list[15].main.humidity
       }% </p>
@@ -110,7 +110,7 @@ function fiveDayForecast(cityName) {
     ).toDateString()} </h5>
       <p id="currenttemp" class="card-text">Temp: ${
         forecastData.list[23].main.temp
-      } F</p>
+      } ℉</p>
       <p id="currenthumidity" class="card-text">Humidity: ${
         forecastData.list[23].main.humidity
       }% </p>
@@ -126,7 +126,7 @@ function fiveDayForecast(cityName) {
     ).toDateString()} </h5>
       <p id="currenttemp" class="card-text">Temp: ${
         forecastData.list[31].main.temp
-      } F</p>
+      } ℉</p>
       <p id="currenthumidity" class="card-text">Humidity: ${
         forecastData.list[31].main.humidity
       }% </p>
