@@ -58,8 +58,8 @@ function fiveDayForecast(cityName) {
     $("#dayone").html(`<div class="card">
     <div class="card-body">
       <p id="date" class="card-text">${new Date(
-        forecastData.list[0].clouds.dt_txt
-      )} </p>
+        forecastData.list[0].dt_txt
+      ).toDateString()} </p>
       <p id="currenttemp" class="card-text">Temp: ${
         forecastData.list[0].main.temp
       } F</p>
@@ -71,52 +71,52 @@ function fiveDayForecast(cityName) {
     $("#daytwo").html(`<div class="card">
     <div class="card-body">
     <p id="date" class="card-text">${new Date(
-      forecastData.list[1].clouds.dt
+      forecastData.list[7].dt_txt
     ).toDateString()} </p>
       <p id="currenttemp" class="card-text">Temp: ${
-        forecastData.list[1].main.temp
+        forecastData.list[7].main.temp
       } F</p>
       <p id="currenthumidity" class="card-text">Humidity: ${
-        forecastData.list[1].main.humidity
+        forecastData.list[7].main.humidity
       }% </p>
     </div>
   </div>`);
     $("#daythree").html(`<div class="card">
     <div class="card-body">
     <p id="date" class="card-text">${new Date(
-      forecastData.list[2].clouds.dt
+      forecastData.list[15].dt_txt
     ).toDateString()} </p>
       <p id="currenttemp" class="card-text">Temp: ${
-        forecastData.list[2].main.temp
+        forecastData.list[15].main.temp
       } F</p>
       <p id="currenthumidity" class="card-text">Humidity: ${
-        forecastData.list[2].main.humidity
+        forecastData.list[15].main.humidity
       }% </p>
     </div>
   </div>`);
     $("#dayfour").html(`<div class="card">
     <div class="card-body">
     <p id="date" class="card-text">${new Date(
-      forecastData.list[3].clouds.dt
+      forecastData.list[23].dt_txt
     ).toDateString()} </p>
       <p id="currenttemp" class="card-text">Temp: ${
-        forecastData.list[3].main.temp
+        forecastData.list[23].main.temp
       } F</p>
       <p id="currenthumidity" class="card-text">Humidity: ${
-        forecastData.list[3].main.humidity
+        forecastData.list[23].main.humidity
       }% </p>
     </div>
   </div>`);
     $("#dayfive").html(`<div class="card">
     <div class="card-body">
     <p id="date" class="card-text">${new Date(
-      forecastData.list[4].clouds.dt
+      forecastData.list[31].dt_txt
     ).toDateString()} </p>
       <p id="currenttemp" class="card-text">Temp: ${
-        forecastData.list[4].main.temp
+        forecastData.list[31].main.temp
       } F</p>
       <p id="currenthumidity" class="card-text">Humidity: ${
-        forecastData.list[4].main.humidity
+        forecastData.list[31].main.humidity
       }% </p>
     </div>
   </div>`);
