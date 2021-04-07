@@ -1,3 +1,18 @@
+function displayHistory() {
+  $(".previous-search").empty();
+  for (var i = 0; i < myArray.length; i++) {
+    var cityHistory = $(
+      `<a href="#" class="previous-search-item previous-search-item-action w-100"></a>`
+    );
+    cityHistory.text(myArray[i]);
+    $(".previous-search").prepend(cityHistory);
+  }
+  $(".previous-search-item").on("click", function () {
+    var cityName = $(this).text();
+    todayWeather(cityName);
+    fiveDayForecast(cityName);
+  });
+}
 // function to display weather for current day
 function todayWeather(currentWeather) {
   var apiKey = "48af17a7060c2205e40c1b9e5e56df19";
