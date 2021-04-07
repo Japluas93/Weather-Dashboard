@@ -66,6 +66,9 @@ function fiveDayForecast(cityName) {
       <p id="currenthumidity" class="card-text">Humidity: ${
         forecastData.list[0].main.humidity
       }% </p>
+      <p id="currentwind" class="card-text">Wind Speed: ${
+        forecastData.list[0].wind.speed
+      } MPH</p>
     </div>
   </div>`);
     $("#daytwo").html(`<div class="card">
