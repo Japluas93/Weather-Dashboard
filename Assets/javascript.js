@@ -188,3 +188,12 @@ $("#forecastbutton").on("click", function () {
     $("#userinput").val("");
   }
 });
+
+function lastSearch() {
+  var cityKey = JSON.parse(localStorage.getItem("city"));
+  var cityOnPage = cityKey[cityKey.length - 1];
+  console.log(cityOnPage);
+
+  todayWeather(cityOnPage);
+  fiveDayForecast(cityOnPage);
+}
