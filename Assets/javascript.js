@@ -82,6 +82,9 @@ function fiveDayForecast(cityName) {
       <p id="currenthumidity" class="card-text">Humidity: ${
         forecastData.list[7].main.humidity
       }% </p>
+      <p id="currentwind" class="card-text">Wind Speed: ${
+        forecastData.list[7].wind.speed
+      } MPH</p>
     </div>
   </div>`);
     $("#daythree").html(`<div class="card">
@@ -95,6 +98,9 @@ function fiveDayForecast(cityName) {
       <p id="currenthumidity" class="card-text">Humidity: ${
         forecastData.list[15].main.humidity
       }% </p>
+      <p id="currentwind" class="card-text">Wind Speed: ${
+        forecastData.list[15].wind.speed
+      } MPH</p>
     </div>
   </div>`);
     $("#dayfour").html(`<div class="card">
@@ -108,6 +114,9 @@ function fiveDayForecast(cityName) {
       <p id="currenthumidity" class="card-text">Humidity: ${
         forecastData.list[23].main.humidity
       }% </p>
+      <p id="currentwind" class="card-text">Wind Speed: ${
+        forecastData.list[23].wind.speed
+      } MPH</p>
     </div>
   </div>`);
     $("#dayfive").html(`<div class="card">
@@ -121,6 +130,9 @@ function fiveDayForecast(cityName) {
       <p id="currenthumidity" class="card-text">Humidity: ${
         forecastData.list[31].main.humidity
       }% </p>
+      <p id="currentwind" class="card-text">Wind Speed: ${
+        forecastData.list[31].wind.speed
+      } MPH</p>
     </div>
   </div>`);
   });
