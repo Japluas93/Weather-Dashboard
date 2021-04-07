@@ -170,3 +170,21 @@ function fiveDayForecast(cityName) {
   </div>`);
   });
 }
+$("#forecastbutton").on("click", function () {
+  var cityName = $("#userinput").val();
+
+  if (!cityName) {
+    return;
+  } else {
+    myArray.push(cityName);
+
+    console.log(myArray);
+    localStorage.setItem("city", JSON.stringify(myArray));
+
+    displayHistory();
+
+    todayWeather(cityName);
+    fiveDayForecast(cityName);
+    $("#userinput").val("");
+  }
+});
