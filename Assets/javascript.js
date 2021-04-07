@@ -1,6 +1,7 @@
 var myArray = localStorage.getItem("city")
   ? JSON.parse(localStorage.getItem("city"))
   : [];
+// function to display search history
 function displayHistory() {
   $(".previous-search").empty();
   for (var i = 0; i < myArray.length; i++) {
@@ -58,7 +59,7 @@ $("#forecastbutton").on("click", function (event) {
   todayWeather(currentCity);
   fiveDayForecast(currentCity);
 });
-
+// function to display weather for the next five days
 function fiveDayForecast(cityName) {
   var apiKey = "48af17a7060c2205e40c1b9e5e56df19";
   var queryURLFiveDays =
@@ -170,6 +171,7 @@ function fiveDayForecast(cityName) {
   </div>`);
   });
 }
+// Function that will save searched cities
 $("#forecastbutton").on("click", function () {
   var cityName = $("#userinput").val();
 
@@ -188,7 +190,7 @@ $("#forecastbutton").on("click", function () {
     $("#userinput").val("");
   }
 });
-
+// Function to display last searched city when the application loads
 function lastSearch() {
   var cityKey = JSON.parse(localStorage.getItem("city"));
   var cityOnPage = cityKey[cityKey.length - 1];
