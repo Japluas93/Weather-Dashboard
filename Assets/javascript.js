@@ -69,6 +69,9 @@ function fiveDayForecast(cityName) {
       <p id="currentwind" class="card-text">Wind Speed: ${
         forecastData.list[0].wind.speed
       } MPH</p>
+      <img src="${
+        forecastData.list[0].weather[0].icon
+      }" id="currentuv" class="card-text">
     </div>
   </div>`);
     $("#daytwo").html(`<div class="card">
