@@ -197,3 +197,5 @@ function lastSearch() {
   todayWeather(cityOnPage);
   fiveDayForecast(cityOnPage);
 }
+displayHistory();
+lastSearch();
