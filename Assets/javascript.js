@@ -60,6 +60,9 @@ function fiveDayForecast(cityName) {
       <h5 id="date" class="card-text">${new Date(
         forecastData.list[0].dt_txt
       ).toDateString()} </h5>
+      <img src="http://openweathermap.org/img/wn/${
+        forecastData.list[0].weather[0].icon
+      }.png" id="currentuv" class="card-text">
       <p id="currenttemp" class="card-text">Temp: ${
         forecastData.list[0].main.temp
       } ℉</p>
@@ -69,9 +72,6 @@ function fiveDayForecast(cityName) {
       <p id="currentwind" class="card-text">Wind Speed: ${
         forecastData.list[0].wind.speed
       } MPH</p>
-      <img src="http://openweathermap.org/img/wn/${
-        forecastData.list[0].weather[0].icon
-      }.png" id="currentuv" class="card-text">
     </div>
   </div>`);
     $("#daytwo").html(`<div class="card">
@@ -79,6 +79,9 @@ function fiveDayForecast(cityName) {
     <h5 id="date" class="card-text">${new Date(
       forecastData.list[7].dt_txt
     ).toDateString()} </h5>
+    <img src="http://openweathermap.org/img/wn/${
+      forecastData.list[7].weather[0].icon
+    }.png" id="currentuv" class="card-text">
       <p id="currenttemp" class="card-text">Temp: ${
         forecastData.list[7].main.temp
       } ℉</p>
@@ -95,6 +98,9 @@ function fiveDayForecast(cityName) {
     <h5 id="date" class="card-text">${new Date(
       forecastData.list[15].dt_txt
     ).toDateString()} </h5>
+    <img src="http://openweathermap.org/img/wn/${
+      forecastData.list[15].weather[0].icon
+    }.png" id="currentuv" class="card-text">
       <p id="currenttemp" class="card-text">Temp: ${
         forecastData.list[15].main.temp
       } ℉</p>
@@ -111,6 +117,9 @@ function fiveDayForecast(cityName) {
     <h5 id="date" class="card-text">${new Date(
       forecastData.list[23].dt_txt
     ).toDateString()} </h5>
+    <img src="http://openweathermap.org/img/wn/${
+      forecastData.list[23].weather[0].icon
+    }.png" id="currentuv" class="card-text">
       <p id="currenttemp" class="card-text">Temp: ${
         forecastData.list[23].main.temp
       } ℉</p>
@@ -127,6 +136,9 @@ function fiveDayForecast(cityName) {
     <h5 id="date" class="card-text">${new Date(
       forecastData.list[31].dt_txt
     ).toDateString()} </h5>
+    <img src="http://openweathermap.org/img/wn/${
+      forecastData.list[31].weather[0].icon
+    }.png" id="currentuv" class="card-text">
       <p id="currenttemp" class="card-text">Temp: ${
         forecastData.list[31].main.temp
       } ℉</p>
